@@ -1,10 +1,8 @@
 '''
-As a User need to
-follow pre
--defined
-Password rules.
-Rule1
-minimum 8
+Rule2
+Should
+have at least 1
+Upper Case All rules must be passe
 
 '''
 import re
@@ -51,7 +49,7 @@ def check_mobile_number(input):
 
 def check_passowrd(input):
 
-    pattern=r"^.{8,}$"
+    pattern=r"^(?=.*[A-Z])(?=.*[a-z]).{8,}$"
     if re.fullmatch(pattern,input):
         return True
 
