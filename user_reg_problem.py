@@ -1,8 +1,9 @@
 '''
-Rule2
-Should
+Rule3  Should
 have at least 1
-Upper Case All rules must be passe
+numeric number in
+the password - All rules must be passed
+Validate that the password contains at least one uppercase letter, one lowercase letter, one digit, and is at least 8 characters long
 
 '''
 import re
@@ -49,7 +50,7 @@ def check_mobile_number(input):
 
 def check_passowrd(input):
 
-    pattern=r"^(?=.*[A-Z])(?=.*[a-z]).{8,}$"
+    pattern=r"^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{8,}$"
     if re.fullmatch(pattern,input):
         return True
 
