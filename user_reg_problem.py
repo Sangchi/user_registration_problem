@@ -2,8 +2,9 @@
 As a User need to
 follow pre
 -defined
-Mobile Format - E.g. 91 9919819801 - Country code follow by space and 10
-digit number
+Password rules.
+Rule1
+minimum 8
 
 '''
 import re
@@ -48,12 +49,22 @@ def check_mobile_number(input):
     else:
         return False
 
+def check_passowrd(input):
+
+    pattern=r"^.{8,}$"
+    if re.fullmatch(pattern,input):
+        return True
+
+    else:
+        return False
+
 def main():
 
     user_input1=input("enter the first name:")
     user_input2=input("enter your last name:")
     user_input3=input("enter your email:")
     user_input4=input("enter you mobile number:")
+    user_input5=input("enter your password:")
 
     if check_name(user_input1):
         print(f"{user_input1}  is valid")
@@ -78,6 +89,12 @@ def main():
 
     else:
         print(f"{user_input4} is not valid user mobile number")
+
+    if check_passowrd(user_input5):
+        print(f" {user_input5} is valid password")
+
+    else:
+        print(f"{user_input5} is not valid password")
 
 
 if __name__=='__main__':
