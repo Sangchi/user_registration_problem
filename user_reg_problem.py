@@ -47,7 +47,7 @@ def check_mobile_number(input):
 
 def check_passowrd(input):
 
-    pattern=r"^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_+{}\[\]:;'\"\\|,.<>?]).{8,}$"
+    pattern=r"^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?!.*[!@#$%^&*()_+{}\[\]:;'\"\\|,.<>?].*[!@#$%^&*()_+{}\[\]:;'\"\\|,.<>?]).{8,}$"
     if re.fullmatch(pattern,input):
         return True
 
